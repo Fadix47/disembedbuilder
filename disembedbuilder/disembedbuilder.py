@@ -399,5 +399,5 @@ class EmbedBuilder(View):
         self.stop()
 
     async def on_check_failure(self, interaction: Interaction) -> None:
-        await interaction.response.send_message(embed=error_embed(f"{interaction.user.mention}, you cannot interact with this menu!"))
+        await interaction.response.send_message(embed=error_embed(f"{interaction.user.mention}, you cannot interact with this menu!"), ephemeral=True)
 
